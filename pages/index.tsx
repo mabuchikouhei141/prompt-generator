@@ -14,6 +14,8 @@ const DynamicSketchPicker = dynamic(() => import('react-color').then(mod => mod.
   loading: () => <p>Loading color picker...</p>
 });
 
+
+
 function Home() {
     const [position, setPosition] = useState<string | null>(null);
     const [request, setRequest] = useState("");
@@ -72,6 +74,11 @@ function Home() {
       document.body.removeChild(textarea);
     };
 
+    type OptionType = {
+      value: string;
+      label: string;
+    };
+
     return (
       <>
         <div className="flex flex-col p-6">
@@ -98,7 +105,10 @@ function Home() {
           { value: 'コンサルタント', label: 'コンサルタント' },
           { value: '歴史家', label: '歴史家' },
         ]}
-        onChange={selectedOption => setPosition(selectedOption?.value)}
+        onChange={(selectedOption: any) => {
+          setPosition(selectedOption?.value ?? '');
+        }}
+        
       />
           <textarea 
             className="p-2 border rounded mb-4" 
