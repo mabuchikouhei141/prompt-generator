@@ -23,8 +23,11 @@ const pickerStyles = {
   }
 };
 
+type SidebarProps = {
+  onGenerate: (input: string) => void;
+};
 
-function Sidebar({ onGenerate }) {
+function Sidebar({ onGenerate }: SidebarProps) {
     const [position, setPosition] = useState<string | null>(null);
     const [request, setRequest] = useState("");
     const [emotion, setEmotion] = useState(50);
@@ -74,9 +77,10 @@ function Sidebar({ onGenerate }) {
       onGenerate(prompt);
   };
 
-  const handlePromptChange = (e) => {
-      setGeneratedPrompt(e.target.value);
-  };
+  const handlePromptChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setGeneratedPrompt(e.target.value);
+};
+
     
 
     const handleCopy = () => {
