@@ -93,7 +93,7 @@ function Sidebar({ onGenerate }) {
       <>
         
         <div className="flex flex-col px-6 lg:px-10 lg:border-r-2 pb-6 lg:shadow-lg lg:w-1/3 lg:overflow-y-auto lg:h-screen">
-        <div className="block text-center mx-auto font-extrabold my-3">Prompt Generator for ChatGPT</div>
+        <div className="block text-center mx-auto font-extrabold my-3">Prompt Generator for GPT-4</div>
         <div className="grid grid-cols-1 gap-2">
         <DynamicSelect 
         options={[

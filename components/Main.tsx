@@ -17,7 +17,7 @@ function Main(props: { prompt: string, onPromptChange: (value: string) => void }
 
   return (
     <>
-      <div className="hidden lg:block lg:w-2/3 lg:p-3">
+      <div className="hidden mx-6 lg:block lg:w-2/3 lg:p-3">
         <h2 className='text-lg font-bold'>生成されたプロンプト：</h2>
         <textarea 
             className="mx-auto my-8 w-full h-4/5" 
