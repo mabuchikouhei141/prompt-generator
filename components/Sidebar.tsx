@@ -52,7 +52,7 @@ function Sidebar({ onGenerate }: SidebarProps) {
     const [target, setTarget] = useState('');
     
     const handleGenerate = () => {
-      let prompt = `###前提条件：あなたはアルバート・アインシュタインのような IQ とカリスマ性を備えた${position ? position : '...'}です。`;
+      let prompt = `###前提条件：あなたは${position ? position : '...'}です。`;
       prompt += `####回答依頼：${request} 。内容を理解したら“OK”と言って作成してください。`;
       prompt += `#emotion：${emotion}%、#Impact：${impact}%、#Benefit：${benefit}%、###Temperature：${usability}、###Max Tokens：${tokens}、`;
     
