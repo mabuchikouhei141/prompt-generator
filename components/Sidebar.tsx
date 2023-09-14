@@ -37,7 +37,7 @@ function Sidebar({ onGenerate }: SidebarProps) {
     const [benefit, setBenefit] = useState(50);
     const [generalPrompt, setGeneralPrompt] = useState(true);
     const [text, setText] = useState('');
-    const [language, setLanguage] = useState('日本語');
+    const [language, setLanguage] = useState('');
     const [format, setFormat] = useState('``');
     const [generatedPrompt, setGeneratedPrompt] = useState('');
     const [tagline, setTagline] = useState(false);
